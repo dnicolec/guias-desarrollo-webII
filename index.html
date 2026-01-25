@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portafolio Estudiantil - Desarrollo Web II</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <style type="text/tailwindcss">
+            @theme {
+                --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                --color-primary: #855a71;
+                --color-accent: #f29ef0;
+                --color-darkBg: #2d2127;
+            }
+        </style>
+    </head>
+    
+    <body class="font-sans text-gray-900 bg-white pt-16" style="font-family: 'Inter', sans-serif;">
+        
+        <!-- HEADER -->
+        <header class="bg-darkBg fixed top-0 left-0 right-0 h-16 z-50">
+            <div class="max-w-7xl mx-auto px-4 h-full">
+                <nav class="flex justify-between items-center h-full">
+                    <strong class="text-white text-lg font-bold tracking-wide">PORTAFOLIO</strong>
+                    
+                    <input type="checkbox" id="menu-toggle" class="hidden peer">
+                    
+                    <ul id="menu-principal" class="hidden peer-checked:flex md:flex md:flex-row flex-col md:static fixed left-0 top-16 w-full md:w-auto bg-gray-900 md:bg-transparent md:gap-8 gap-2 p-5 md:p-0 shadow-lg md:shadow-none z-50">
+                        <li><a href="#inicio" class="text-white text-sm font-medium tracking-wide hover:opacity-70 transition-opacity duration-300">INICIO</a></li>
+                        <li><a href="#guias" class="text-white text-sm font-medium tracking-wide hover:opacity-70 transition-opacity duration-300">GUÍAS</a></li>
+                    </ul>
+                
+                    <label for="menu-toggle" class="md:hidden flex flex-col cursor-pointer select-none p-2 rounded-lg">
+                        <span class="w-7 h-0.5 bg-white my-1 transition-all duration-300"></span>
+                        <span class="w-7 h-0.5 bg-white my-1 transition-all duration-300"></span>
+                        <span class="w-7 h-0.5 bg-white my-1 transition-all duration-300"></span>
+                    </label>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- INICIO -->
+            <section id="inicio" class="w-full p-0">
+                <figure class="w-full m-0 p-0">
+                    <img src="img/portafolio.png" alt="Portafoleo de Desarrollo Web II" class="w-full h-auto block">
+                </figure>
+            </section>
+
+            <!-- GUÍAS -->
+            <section id="guias" class="py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4">
+                    <header class="text-center mb-12">
+                        <h2 class="text-sm font-normal text-accent mb-2 lowercase">Mis trabajos</h2>
+                        <h3 class="text-4xl font-bold mb-8 tracking-tight text-primary">GUÍAS</h3>
+                    </header>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <article class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-3 hover:shadow-xl">
+                            <div class="p-6">
+                                <h4 class="text-xl mb-3 text-gray-900 font-semibold">Guía 1: Introducción a Tailwind CSS</h4>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Se identificó cómo usar las clases utilitarias de Tailwind CSS para estilizar componentes rápidamente,
+                                    se crearon diseños responsivos y se personalizalizaron configuraciones básicas en proyectos con Tailwind CSS
+                                </p>
+                                <nav class="flex flex-col gap-2">
+                                    <a href="Guia1_20245476/pricing-card/pricing.html" class="text-accent text-sm font-medium py-1 border-b border-transparent text-center hover:border-gray-600 transition-colors">Tarjetas de precios</a>
+                                    <a href="Guia1_20245476/producto/producto.html" class="text-accent text-sm font-medium py-1 border-b border-transparent text-center hover:border-gray-600 transition-colors">Producto</a>
+                                    <a href="Guia1_20245476/galeria/galeria.html" class="text-accent text-sm font-medium py-1 border-b border-transparent text-center hover:border-gray-600 transition-colors">Galería de imágenes</a>
+                                    <a href="Guia1_20245476/login/login.html" class="text-accent text-sm font-medium py-1 border-b border-transparent text-center hover:border-gray-600 transition-colors">Formulario de inicio de sesión</a>
+                                    <a href="Guia1_20245476/clipboard/index.html" class="text-accent text-sm font-medium py-1 border-b border-transparent text-center hover:border-gray-600 transition-colors">Clipboard landing page</a>
+                                    <a href="Guia1_20245476/coldplay/coldplay.html" class="text-accent text-sm font-medium py-1 border-b border-transparent text-center hover:border-gray-600 transition-colors">Ejercicio: Página para Coldplay</a>
+                                </nav>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-darkBg text-white py-6">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-4 text-center md:text-left">
+                <p class="text-sm text-gray-400">Portafolio Estudiantil - Debbie Cruz © 20245476</p>
+                <nav id="redes-sociales" class="flex gap-6">
+                    <a href="https://github.com/dnicolec/guias-desarrollo-web.git" class="text-gray-400 hover:text-white transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+
+    </body>
+</html>
